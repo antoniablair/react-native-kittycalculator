@@ -3,35 +3,37 @@ import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { common } from '../utils/common';
 
-export default class CalcButton extends React.Component {
+import CalcButton from './CalcButton';
+
+export default class Total extends React.Component {
   constructor(props) {
     super(props);
     this.state = {total: 0};
   }
   render() {
     return (
-      <View style={styles.button}>
-        <View style={styles.row}>
-          <Text style={styles.buttonText}>+</Text>
-        </View>
+      <View style={styles.total}>
+        <Text style={styles.text}>Total</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  button: {
-    alignItems: 'center',
-    backgroundColor: common.button,
-    width: '20%',
-    height: '100%',
+  total: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    backgroundColor: common.darkBlue,
+    height: '12%',
+    width: '80%',
+    marginBottom: '5%',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+    paddingLeft: '2%',
+    paddingRight: '2%',
   },
-  buttonText: {
+  text: {
     fontSize: 30,
+    color: common.white,
     lineHeight: 40,
-    textAlign: 'center',
-    alignItems: 'center',
   }
 });

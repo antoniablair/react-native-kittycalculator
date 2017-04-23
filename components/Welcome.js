@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     backgroundColor: common.teal,
+    flexDirection: 'column',
   },
   welcome: {
     fontSize: 20,

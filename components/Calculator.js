@@ -3,7 +3,8 @@ import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { common } from '../utils/common';
 
-import CalcButton from './CalcButton';
+import ButtonRow from './ButtonRow';
+import Total from './Total';
 
 export default class Calculator extends React.Component {
   constructor(props) {
@@ -14,7 +15,11 @@ export default class Calculator extends React.Component {
     let button = null;
     return (
       <View style={styles.container}>
-      <CalcButton />
+        <Total />
+        <ButtonRow />
+        <ButtonRow />
+        <ButtonRow />
+        <ButtonRow />
       </View>
     );
   }
@@ -24,7 +29,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: common.teal,
+    width: '100%',
   },
   welcome: {
     fontSize: 20,
@@ -40,9 +47,5 @@ const styles = StyleSheet.create({
     marginTop: '10%',
     width: '50%',
     height: '25%',
-  },
-  calculatorButton: {
-    width: '5%',
-    height: '5%',
   },
 });
